@@ -1,7 +1,7 @@
 ---
 title: "Introduction"
-teaching: 0
-exercises: 0
+teaching: 5
+exercises: 5
 questions:
 - "Key question (FIXME)"
 objectives:
@@ -9,7 +9,8 @@ objectives:
 keypoints:
 - "First key point. Brief Answer to questions. (FIXME)"
 ---
-FIXME
+
+
+### Recap: the Git working Cycle
 
 {% include links.md %}
-

@@ -1,6 +1,6 @@
 ---
-title: "Everything"
-teaching: 0
+title: "Overview of Git hosting sites"
+teaching: 15
 exercises: 0
 questions:
 - "Key question (FIXME)"
@@ -10,7 +10,6 @@ keypoints:
 - "First key point. Brief Answer to questions. (FIXME)"
 ---
 
-## Overview of Git hosting sites
 * Many common features:
   * Usually free for Public repositories
   * Code Management
@@ -48,6 +47,7 @@ keypoints:
 #### GitLab.com
 * Free private repositories
 * Hosting of static websites (GitLab pages)
+
 
 ### Self-Hosted
 * Run a Git Hosting Platform on your own server.
@@ -88,24 +88,5 @@ developers know this is going to be taken care of.
 Issues are searchable by state, label, full-text, etc. ("Didn't something
 similar happen 2 years ago? How exactly did we solve it?")
 
-
-
-~~~
-$ pwd
-~~~
-{: .language-bash}
-~~~
-/home/vlad/Desktop/planets
-~~~
-{: .output}
-
-> ## Lorem
-> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-> consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-> cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-> proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-{: .callout}
 
 {% include links.md %}
