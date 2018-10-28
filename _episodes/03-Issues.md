@@ -3,9 +3,10 @@ title: "Issue Tracker"
 teaching: 7
 exercises: 3
 questions:
-- "Key question (FIXME)"
+- "How do I use Issues?"
 objectives:
-- "First learning objective. (FIXME)"
+- "Filing new issues."
+- "Classifying issues with labels."
 keypoints:
 - "Issues are used to plan further development."
 - "Developers and users will communicate so that developers can reproduce bugs."
@@ -17,7 +18,7 @@ Issues are being used for communication between *users* and *developers* as
 well as *developers* among themselves.
 
 Issues mostly suspected or confirmed **bugs**, **enhancements** (feature-
-requests) or **questions** on how to use a certain functionality (which in 
+requests) or **questions** on how to use a certain functionality (which in
 turn might initiate improvements to the documentation).
 
 Each new issue gets a unique ID (number) and the status *open*.
@@ -49,11 +50,11 @@ similar happen 2 years ago? How exactly did we solve it?")
 > 1. Go to your `planets` repository on GitHub from the first Git workshop,
 >    (or to the one of your instructor).
 > 2. Switch to the *Issues* tab
-> 3. Click  on _[New Issue]_ 
+> 3. Click  on _[New Issue]_
 > 4. Enter a _title_ and _comment_.
 > 5. Use various formatting options in the toolbar.
 > 6. Use the _Preview_ tab.   
->    You can switch back and forth between the _Write_ and _Preview_ tabs 
+>    You can switch back and forth between the _Write_ and _Preview_ tabs
 >    to test out the formatting.
 > 7. Submit the issue.
 >

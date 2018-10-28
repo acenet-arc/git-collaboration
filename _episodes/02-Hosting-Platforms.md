@@ -3,11 +3,15 @@ title: "Overview of Git hosting sites"
 teaching: 15
 exercises: 0
 questions:
-- "Key question (FIXME)"
+- "What are the most-widely used Git hosting sites?"
 objectives:
-- "First learning objective. (FIXME)"
+- "Common functionalities of Git Hosting sites."
+- "What are some of the differences."
 keypoints:
-- "First key point. Brief Answer to questions. (FIXME)"
+- "Several services exist that offer hosting of Git repositories."
+- "Hosting of public and/or Open-Source projects is mostly free of charge."
+- "Hosting of non-public repositories often requires a paid-for plan or has certain restrictions."
+- "Several self-hosted solutions exist."
 ---
 
 * Many common features:
@@ -48,6 +52,9 @@ keypoints:
 * Free private repositories
 * Hosting of static websites (GitLab pages)
 
+#### Others:
+* SourceForge.net
+* Google Code (closed)
 
 ### Self-Hosted
 * Run a Git Hosting Platform on your own server.
@@ -59,34 +66,9 @@ keypoints:
 #### Gitea
 * Very lightweight but just the basic features
 
-## Issues
-Issues are being used for communication between *users* and *developers*.
-These roles are not mutually exclusive by any means and almost all developers
-act as users anytime they use the software.
-
-Issues mostly suspected or confirmed **bugs**, or **enhancements**/**feature-
-requests**.  Each new issue gets a unique ID (number) and the status *open*.
-Developers, users and visitors can communicate back and forth.
-Once the issue is resolved (bug has been fixed or ruled out, new feature has
-been implemented or rejected), the issue is closed and becomes inactive.
-
-If code is changed in response to an issue, one can (and should) cross-
-reference the commit and the issue.  This can be done in two ways:
-1. Add the issue ID to the commit message, e.g. `fixes: #1`, `resolves: #2`
-   or `implements #3`. Some platforms can automatically close the referenced
-   issue.
-2. Mention one or more commit IDs (either short or long form)
-   in articles of the issue. `fixed by: a1b2c3d`
-
-Most platforms support tagging issues with custom labels. This helps
-classifying them (bug, enhancement, cleanup, priority, etc.). Many allow also
-to assign them to a milestone (each milestone shows the number of issues that
-are still open / already closed).
-Issues can also be assigned to a developer who will work on it, letting other
-developers know this is going to be taken care of.
-
-Issues are searchable by state, label, full-text, etc. ("Didn't something
-similar happen 2 years ago? How exactly did we solve it?")
-
+#### Others:
+* [Trac](https://trac.edgewall.org/)
+* [Gogs](https://gogs.io/)
+* [gitolite](http://gitolite.com/) (only repository - no other features)
 
 {% include links.md %}
