@@ -3,7 +3,7 @@ title: "Pages"
 teaching: 0
 exercises: 0
 questions:
-- "Key question (FIXME)"
+- "How can I host a simple website? (FIXME)"
 objectives:
 - "First learning objective. (FIXME)"
 keypoints:
@@ -11,9 +11,6 @@ keypoints:
 ---
 
 
-[gh-pages]: https://pages.github.com/
-[gl-pages]: https://gitlab.com/help/user/project/pages/index.md
-[bb-pages]: https://confluence.atlassian.com/bitbucket/publishing-a-website-on-bitbucket-cloud-221449776.html
 
 
 ```yaml
@@ -36,3 +33,9 @@ It Works! :-)
 3. Add more `*.md` files, e.g. `about.md`
 4. add a link to [about.md](about) with: `[about.md](about)`
 ```
+
+
+
+[gh-pages]: https://pages.github.com/
+[gl-pages]: https://gitlab.com/help/user/project/pages/index.md
+[bb-pages]: https://confluence.atlassian.com/bitbucket/publishing-a-website-on-bitbucket-cloud-221449776.html

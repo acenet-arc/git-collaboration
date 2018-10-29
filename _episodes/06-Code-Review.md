@@ -3,7 +3,7 @@ title: "Code Review"
 teaching: 15
 exercises: 5
 questions:
-- "How to perform Code Review."
+- "Why should I do Code Review and how can I do it?"
 objectives:
 - "First learning objective. (FIXME)"
 keypoints:
@@ -49,7 +49,7 @@ old version in red and new one in green) - and then click on the [+] icon next
 to a line and leave a related comment with suggestions and continue with other
 lines and files.
 
-![Screen Shot of Code review](../fig/code-review.png)
+![Screen Shot of Code review]( {{ site.baseurl }}{% link fig/code-review.png %} )
 
 Here it is important for the reviewer to leave constructive feedback and if possible
 an explanation on why they think something should be done in a different way.
@@ -77,4 +77,5 @@ can implement the agreed upon changes and commit and push them to their reposito
 {: .challenge}
 
 
-[wp-code-review]: https://en.wikipedia.org/wiki/Code_review
+
+{% include links.md %}

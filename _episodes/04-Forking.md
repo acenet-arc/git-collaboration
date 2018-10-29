@@ -3,9 +3,9 @@ title: "Forking a Repository"
 teaching: 5
 exercises: 3
 questions:
-- "Key question (FIXME)"
+- "How can I make an online copy of a repository on which I can work?"
 objectives:
-- "First learning objective. (FIXME)"
+- "Create an online copy of a repository under your own account."
 keypoints:
 - "First key point. Brief Answer to questions. (FIXME)"
 ---
@@ -39,8 +39,10 @@ that copy and can work on implementing an enhancement or fixing a bug.
 > ## Create a Fork
 >
 > 1. Go to your instructor's `testing_demo` repository on GitHub.
-> 2. Click on the "Fork" button: ![GitHub Fork Button](../fig/GH-fork.png)
+> 2. Click on the "Fork" button.
 > 3. Wait a few moments until the repository has been copied
 > 4. Explore your forked repository.
 >
 {: .challenge}
+
+{% include links.md %}

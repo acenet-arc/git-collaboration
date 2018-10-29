@@ -150,5 +150,4 @@ upload releases manually.
 Zenodo is funded by OpenAIRE ("Open Access Infrastructure for Research in Europe")
 and data is stored in the CERN Data Center.
 
-[semver]: https://semver.org/
-[zenodo]: https://zenodo.org
+{% include links.md %}

@@ -1,3 +1,16 @@
+
+[github]: https://github.com
+[gitlab]: https://gitlab.com
+[bitbucket]: https://bitbucket.org/
+[gitlab-ce]: https://about.gitlab.com/install/?version=ce
+[gitea]: https://gitea.io/
+[travis]: https://travis-ci.com/
+[jenkins]: https://jenkins.io/
+[wp-code-review]: https://en.wikipedia.org/wiki/Code_review
+[semver]: https://semver.org/
+[zenodo]: https://zenodo.org
+
+
 [cc-by-human]: https://creativecommons.org/licenses/by/4.0/
 [cc-by-legal]: https://creativecommons.org/licenses/by/4.0/legalcode
 [ci]: http://communityin.org/

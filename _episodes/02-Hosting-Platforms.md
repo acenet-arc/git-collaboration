@@ -35,7 +35,7 @@ keypoints:
     * limited number of CI-minutes per month for free
 
 ### Hosted Platforms
-#### GitHub
+#### [GitHub][github]
 * Biggest site
 * Private repositories for a fee
 * Free packages for Students, Teachers/Educators
@@ -43,12 +43,12 @@ keypoints:
 * external Continuous Integration service: Travis-CI.com
 * integrated with many 3rd party services
 
-#### BitBucket
+#### [Bitbucket][bitbucket]
 * Supports also Mercurial (`hg`) repositories
 * Free private repositories (max 5 collaborators)
 * Academic accounts (User and/or Team) with unlimited private repositories.
 
-#### GitLab.com
+#### [GitLab.com][gitlab]
 * Free private repositories
 * Hosting of static websites (GitLab pages)
 
@@ -59,11 +59,11 @@ keypoints:
 ### Self-Hosted
 * Run a Git Hosting Platform on your own server.
 
-#### GitLab Community Edition (CE)
+#### [GitLab Community Edition (CE)][gitlab-ce]
 * Open Source version of the software running on GitLab.com
 * Almost all features of GitLab.com
 
-#### Gitea
+#### [Gitea][gitea]
 * Very lightweight but just the basic features
 
 #### Others:

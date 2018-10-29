@@ -57,7 +57,7 @@ into the original repository from the website and thereby close the pull-request
 >
 {: .challenge}
 
-![Creating a Pull Request](../fig/create-pull-request.png)
+![Creating a Pull Request]({{ site.baseurl }}{% link fig/create-pull-request.png %})
 
 > ## Choose the right branches!
 > When creating a pull-request you have to choose the correct repositories:
@@ -114,3 +114,5 @@ into the original repository from the website and thereby close the pull-request
 > If your own project accepts contributions from other developers,
 > consider creating a  `CONTRIBUTING` of your own.
 {: .callout}
+
+{% include links.md %}
