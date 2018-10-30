@@ -42,8 +42,8 @@ are still open / already closed).
 Issues can also be assigned to a developer who will work on it, letting other
 developers know this is going to be taken care of.
 
-Issues are searchable by state, label, full-text, etc. ("Didn't something
-similar happen 2 years ago? How exactly did we solve it?")
+Issues are searchable by state, label, full-text, etc. (*"Didn't something
+similar happen 2 years ago? How exactly did we solve it?"*)
 
 > ## Create an Issue
 >
@@ -66,6 +66,23 @@ similar happen 2 years ago? How exactly did we solve it?")
 > the state in the repository's settings.
 {: .callout}
 
-## Milestones (FIXME)
+## Milestones
+
+Milestones are a way to keep track on how far along you are on the way to
+the next release.  You can create *Milestones* for your next releases,
+like for the next Major-release (e.g. `v1.0`) as well as the next Minor-release
+(e.g. `v0.5`), etc.  Then you can attach issues to these different milestones:
+
+* An important bug that should be fixed for the next patch release.
+* A not so important bug that needs to go into the next minor release.
+* An easy new feature that should be ready for the next minor release as well.
+* A more difficult feature that will have to wait for the next Major release.
+* Some interesting idea that will have to wait until Version 2.0
+
+You can get an overview that e.g. 9 out of 10 issues for the next patch release
+have already been closed. Just the one and you can release it.
+
+The next minor release has still 10 open issues so still a bit to.
+
 
 {% include links.md %}
