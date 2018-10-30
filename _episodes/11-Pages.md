@@ -39,3 +39,5 @@ It Works! :-)
 [gh-pages]: https://pages.github.com/
 [gl-pages]: https://gitlab.com/help/user/project/pages/index.md
 [bb-pages]: https://confluence.atlassian.com/bitbucket/publishing-a-website-on-bitbucket-cloud-221449776.html
+
+{% include links.md %}

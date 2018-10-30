@@ -108,9 +108,9 @@ stable.
 
 > ## Re-releasing under the same version number.
 >
-> > I've just yesterday released version X.Y.Z but now I've found a little bug.  
-> > Can I just fix it and re-use the same version number?
-> > People probably won't notice it anyway.
+>  I've just yesterday released version X.Y.Z but now I've found a little bug.  
+>  Can I just fix it and re-use the same version number?
+>  People probably won't notice it anyway.
 >
 > > ## Solution:
 > > ### No. Don't. Don't even think of it. NO, NO, NO!!!

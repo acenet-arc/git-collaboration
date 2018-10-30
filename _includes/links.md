@@ -1,4 +1,3 @@
-
 [github]: https://github.com
 [gitlab]: https://gitlab.com
 [bitbucket]: https://bitbucket.org/
@@ -13,7 +12,6 @@
 [github-markdown]: https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown
 [gitlab-markdown]: https://docs.gitlab.com/ce/user/markdown.html#gitlab-flavored-markdown-gfm
 [bitbucket-markdown]: https://confluence.atlassian.com/bitbucketserver/markdown-syntax-guide-776639995.html
-
 [cc-by-human]: https://creativecommons.org/licenses/by/4.0/
 [cc-by-legal]: https://creativecommons.org/licenses/by/4.0/legalcode
 [ci]: http://communityin.org/

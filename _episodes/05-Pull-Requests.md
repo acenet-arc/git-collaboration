@@ -42,7 +42,7 @@ into the original repository from the website and thereby close the pull-request
 >    ~~~
 >    more_files  mean.py  README.md  Workflow.md
 >    ~~~
->    {: ..output-bash}
+>    {: .output}
 > 3. Download the file `test_mean.py` and copy it into the cloned repo
 >    (Into the same folder that contains `README.md` and `mean.py`).
 > 4. Add the file `test_mean.py`, make a commit and push to GitHub:

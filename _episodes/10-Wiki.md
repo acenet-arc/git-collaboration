@@ -80,6 +80,7 @@ format words in **bold** or *italics*
 
 use `inline code` markup
 ~~~
+{: .source}
   </div>
   <div class="col-md-6" markdown="1">
 format words in **bold** or *italics*
@@ -96,6 +97,7 @@ use `inline code` markup
 *   to create
 *   bullet lists.
 ~~~
+{: .source}
   </div>
   <div class="col-md-6" markdown="1">
 *   Use asterisks
@@ -111,6 +113,7 @@ use `inline code` markup
 1.  to create
 1.  numbered lists.
 ~~~
+{: .source}
   </div>
   <div class="col-md-6" markdown="1">
 1.  Use numbers
@@ -129,6 +132,7 @@ use `inline code` markup
 	1. Of different
 	1. types
 ~~~
+{: .source}
   </div>
   <div class="col-md-6" markdown="1">
 *  You can use indents
@@ -145,6 +149,7 @@ use `inline code` markup
 ~~~
 # A Level-1 Heading
 ~~~
+{: .source}
   </div>
   <div class="col-md-6" markdown="1">
 # A Level-1 Heading
@@ -156,6 +161,7 @@ use `inline code` markup
 ~~~
 ## A Level-2 Heading (etc.)
 ~~~
+{: .source}
   </div>
   <div class="col-md-6" markdown="1">
 ## A Level-2 Heading (etc.)
@@ -171,6 +177,7 @@ don't matter.
 But blank lines
 create new paragraphs.
 ~~~
+{: .source}
   </div>
   <div class="col-md-6" markdown="1">
 Line breaks
@@ -189,6 +196,7 @@ Or use [named links][data_carpentry].
 
 [data_carpentry]: http://datacarpentry.org
 ~~~
+{: .source}
   </div>
   <div class="col-md-6" markdown="1">
 [Create links](http://software-carpentry.org) with `[...](...)`.
@@ -204,6 +212,7 @@ Or use [named links][data_carpentry].
 Insert images with `![alt-text](URL)`:
 ![Git Logo](https://git-scm.com/images/logo.png) 
 ~~~
+{: .source}
   </div>
   <div class="col-md-6" markdown="1">
 Insert images with `![alt-text](URL)`:
@@ -222,6 +231,7 @@ def square(x):
 Many other languages are supported.
 Just change `python` into something else.
 ~~~
+{: .source}
   </div>
   <div class="col-md-6" markdown="1">
 A python code-block:
@@ -235,8 +245,8 @@ Just change `python` into something else.
 </div>
 
 
-> Most of these examples are taken from:
-> [Software Carpentry: Plotting and Programming in Python][python-gapminder]
-> 2016.
+Most of these examples are taken from:
+[Software Carpentry: Plotting and Programming in Python][python-gapminder]
+2016.
 
 {% include links.md %}
