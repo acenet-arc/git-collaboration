@@ -1,9 +1,9 @@
 ---
 title: "Pages"
-teaching: 0
-exercises: 0
+teaching: 10
+exercises: 5
 questions:
-- "How can I host a simple website? (FIXME)"
+- "How can I host a simple website?"
 objectives:
 - "Learn how to host a static website with documentation or a blog on a Git Platform."
 keypoints:
@@ -90,10 +90,36 @@ Switch back to the browser and reload the settings page.  Under the GitHub
 pages section you should now see the URL under which the site was published
 (`https://<username>.github.io/testing_demo/`).  Click on that link -- et viol&agrave;!
 
+From the data inside the [Jekyll][jekyll] configuration file `_config.yml` 
+and landing page `index.md` in Markdown format, a website was build on
+the GitHub servers and is now available to be viewed by anyone.
+
+
+> ## Change the Jekyll theme
+> 
+> Go back to the repository's settings and use the *Theme Chooser* to select
+> a different theme.  
+> Notice that this has generated a new commit.  Use `git pull origin` to pull
+> this change into your local repository.
+>
+{: .challenge }
+
+
+
 > ## Some notes on GitHub pages
 >
+> * In this example the web-pages are located in a `docs` sub-directory within 
+>   the repository.  We could have placed the `_config.yml`, `index.md` and
+>   other files instead into the repository's root directory  of the `master`
+>   or `gh-pages` branch and selected the appropriate option from the dropdown
+>   in the repository's GitHub-pages settings.
 >
+> * Previously GitHub pages had to be hosted from a branch called `gh-pages`.
+>   This could have been the sole branch of a repository or in addition to
+>   a `master` branch with code.  This is still possible but no longer a requirement.
+> 
 {: .callout }
+
 
 ### GitLab pages
 
