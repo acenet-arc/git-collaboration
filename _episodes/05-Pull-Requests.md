@@ -5,9 +5,13 @@ exercises: 5
 questions:
 - "How do I contribute changes to someone else's project?"
 objectives:
-- "First learning objective. (FIXME)"
+- "Contribute changes that are within your hosted repository back to the original one."
 keypoints:
-- "First key point. Brief Answer to questions. (FIXME)"
+- "Pull-requests are used to merge commits between repositories that share a common ancestor."
+- "Like issues contributors and maintainers can communicate via comments."
+- "Commits that are pushed to the branch that is to be merged, they become part of the PR."
+- "Once a maintainer is satisfied with the contribution, they merge the pull-request."
+- "Pull-requests are closed by either merging or rejecting them."
 ---
 
 Pull-Requests are a method of merging commits between repositories that have

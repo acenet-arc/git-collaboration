@@ -5,9 +5,13 @@ exercises: 5
 questions:
 - "Why should I do Code Review and how can I do it?"
 objectives:
-- "First learning objective. (FIXME)"
+- "Learn how to review someone's pull-request."
 keypoints:
-- "First key point. Brief Answer to questions. (FIXME)"
+- "Code review increases code quality."
+- "The reviewer checks whether the contribution conforms to the set standards."
+- "When has >>I promise I'll write the documentation/tests later!<< ever worked?"
+- "A second pair of eyes might find a more elegant solution."
+- "The reviewer might learn something new when reading someone else's code."
 ---
 
 Code Review is a practice in software development, where one or more other

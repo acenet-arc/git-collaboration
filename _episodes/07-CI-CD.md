@@ -193,8 +193,4 @@ any version control solution.  Their use however is quite different from
 the services introduced above and they are beyond the scope of this lesson.
 
 
-[travis-turorial]: https://docs.travis-ci.com/user/tutorial/
-[gitlab-ce-ci-quickstart]: https://docs.gitlab.com/ce/ci/quick_start/README.html
-[bitbucket-pipleline-getting-started]: https://confluence.atlassian.com/bitbucket/get-started-with-bitbucket-pipelines-792298921.html
-
 {% include links.md %}
