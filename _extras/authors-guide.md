@@ -19,26 +19,6 @@ Just add the  `{% include mermaid.html %}` and not the `{% raw %}` and `{% endra
 ```
 Then mermaid graphs can be used as shown below.
 
-### Flow Chart
-
-```
-<div class="mermaid">
-graph LR
-    A[Hard edge] -->|Link text| B(Round edge)
-    B --> C{Decision}
-    C -->|One| D[Result one]
-    C -->|Two| E[Result two]
-</div>
-```
-
-<div class="mermaid">
-graph LR
-    A[Hard edge] -->|Link text| B(Round edge)
-    B --> C{Decision}
-    C -->|One| D[Result one]
-    C -->|Two| E[Result two]
-</div>
-
 ### Git Graph
 
 ```
@@ -81,5 +61,24 @@ commit
 merge newbranch
 </div>
 
+### Flow Chart
+
+```
+<div class="mermaid">
+graph LR
+    A[Hard edge] -->|Link text| B(Round edge)
+    B --> C{Decision}
+    C -->|One| D[Result one]
+    C -->|Two| E[Result two]
+</div>
+```
+
+<div class="mermaid">
+graph LR
+    A[Hard edge] -->|Link text| B(Round edge)
+    B --> C{Decision}
+    C -->|One| D[Result one]
+    C -->|Two| E[Result two]
+</div>
 
 {% include links.md %}
