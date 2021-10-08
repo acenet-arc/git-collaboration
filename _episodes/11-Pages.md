@@ -38,7 +38,7 @@ First we need to activate the "Pages" functionality for this repo:
 
 1. go to the repository's settings, 
 2. scroll down to "GitHub Pages"
-3. in the dropdown select **master branch / docs folder**
+3. in the dropdown select **main branch / docs folder**
 4. click **Save**
 5. we **don't** use the Theme Chooser at this point.
 
@@ -82,7 +82,7 @@ Now we commit the changes and push them to GitHub:
 ~~~
 testing_demo $  git add _config.yml index.md
 testing_demo $  git commit -m "my first GitHub page"
-testing_demo $  git push origin master
+testing_demo $  git push origin main
 ~~~
 {: .language-bash }
 
@@ -110,13 +110,13 @@ the GitHub servers and is now available to be viewed by anyone.
 >
 > * In this example the web-pages are located in a `docs` sub-directory within 
 >   the repository.  We could have placed the `_config.yml`, `index.md` and
->   other files instead into the repository's root directory  of the `master`
+>   other files instead into the repository's root directory  of the `main`
 >   or `gh-pages` branch and selected the appropriate option from the dropdown
 >   in the repository's GitHub-pages settings.
 >
 > * Previously GitHub pages had to be hosted from a branch called `gh-pages`.
 >   This could have been the sole branch of a repository or in addition to
->   a `master` branch with code.  This is still possible but no longer a requirement.
+>   a `main` branch with code.  This is still possible but no longer a requirement.
 > 
 {: .callout }
 

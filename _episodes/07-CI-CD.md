@@ -169,7 +169,7 @@ pipelines:
 >    testing_demo $  cp  more_files/requirements.txt  ./
 >    testing_demo $  git add .travis.yml
 >    testing_demo $  git commit -m "add Travis-CI config"
->    testing_demo $  git push origin master
+>    testing_demo $  git push origin main
 >    ~~~
 >    {: .language-bash}
 > 6. Go to the "Commits tab" of your repository on GitHub.  
