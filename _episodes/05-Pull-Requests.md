@@ -54,7 +54,7 @@ into the original repository from the website and thereby close the pull-request
 >    $ cp more_files/test_mean.py  ./
 >    $ git add test_mean.py
 >    $ git commit -m "adding unit tests"
->    $ git push origin master
+>    $ git push origin main
 >    ~~~
 >    {: .language-bash}
 > 5. Go back to the GitHub website and open a pull-request (button: [New Pull Request]).

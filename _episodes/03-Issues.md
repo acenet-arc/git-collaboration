@@ -60,6 +60,7 @@ similar happen 2 years ago? How exactly did we solve it?"*)
 >
 {: .challenge}
 
+> ## Check the Project Settings
 > Most sites allow to enable/disable the issue tracker for each repository
 > in the settings.  Whether it is enabled or disabled for a new repository
 > depends on the default settings of the site.  Maybe you need to change

@@ -15,7 +15,8 @@ keypoints:
 ---
 
 * Many common features:
-  * Usually free for Public repositories
+  * Usually free for public and private repositories
+  * Private repositories may have some limitations
   * Code Management
     * Git repositories
     * Browsing history
@@ -29,28 +30,49 @@ keypoints:
   * Wiki (documentation / notes)
   * Rendering of Markdown files.
   * Group-accounts
-    * Organizations (GH), Teams/Projects (BB), Groups (GL)
+    * Organizations (GH), Groups (GL), Teams/Projects (BB)
   * Snippets (GitHub: Gist)
   * Continuous Integration (CI, Pipelines)
     * limited number of CI-minutes per month for free
 
 ### Hosted Platforms
+
+Note that the providers below constantly adding new features and the list below 
+is just a snapshot of notable features at the time of writing and does not claim
+to be complete in any way but should just serve as a limited overview.
+
+
 #### [GitHub][github]
 * Biggest site
-* Private repositories for a fee
-* Free packages for Students, Teachers/Educators
-* Hosting of static websites (GitHub pages)
-* external Continuous Integration service: Travis-CI.com
+* Unlimited public/private repositories
+* Hosting of static websites ([GitHub pages](https://docs.github.com/en/pages))
+* Continuous Integration ([GitHub Actions](https://docs.github.com/en/actions)):
+  * free CI-minutes for public repositories and self-hosted runners
+  * limited free monthly CI-minutes for private repositories
+* Package registry ([GitHub Packages](https://docs.github.com/en/packages))
+  * host packages for npm, RubyGems, Maven, Gradle, NuGet, Container
+  * free for public packages
+  * certain amount of free storage and data transfer for private packages
+* GitHub sends "Dependabot" alerts for vulnerable dependencies
 * integrated with many 3rd party services
-
-#### [Bitbucket][bitbucket]
-* Supports also Mercurial (`hg`) repositories
-* Free private repositories (max 5 collaborators)
-* Academic accounts (User and/or Team) with unlimited private repositories.
+* Offers for Students, Teachers/Educators, OpenSource Teams, Nonprofits.
 
 #### [GitLab.com][gitlab]
-* Free private repositories
-* Hosting of static websites (GitLab pages)
+* Unlimited public/private repositories
+* Hosting of static websites ([GitLab pages](https://docs.gitlab.com/ee/user/project/pages/))
+* Continuous Integration ([CI/CD pipeline](https://docs.gitlab.com/ee/ci/)) 
+  with limited free monthly CI-minutes
+* [Package registry](https://docs.gitlab.com/ee/user/package)
+  * host packages for npm, Maven, NuGet, PyPI, Containers
+  * support for other types is available as _Beta_
+  * Limited repository storage amount per project is free.
+* Additional CI/CD minutes and package storage can be purchased
+
+#### [Bitbucket][bitbucket]
+* Unlimited public/private repositories (max 5 collaborators)
+* Academic accounts (User and/or Team) with unlimited private repositories.
+* Continuous Integration ([CI/CD pipeline](https://docs.gitlab.com/ee/ci/)) 
+  limited free monthly CI-minutes
 
 #### Others:
 * SourceForge.net
