@@ -312,36 +312,8 @@ merge it into the `main` branch.
 
    Sure enough, all that has changed is which commit the label `main` points to.
 
-3. We can now delete the branch `bugfix3`, because we no longer need it. We do this with the command
-   `git branch -d bugfix3`:
 
-   <div class="mermaid">
-   flowchart RL
-       c0((c0))
-       c1((c1)) ==> c0
-       c2((c2)) ==> c1
-       c3((c3)) ==> c1
-       c4((c4)) ==> c3
-       c5((c5)) ==> c4
-       c6((c6)) ==> c2
-       c7((c7)) ==> c2
-       c8((c8)) ==> c7
-   
-       l1([main]) --> c8
-       l2([feature1]) --> c5
-       l3([feature2]) --> c6
-       HEAD([HEAD]) --> l1
-   
-       classDef label fill:#ff1,stroke:#333,stroke-width:2px;
-       classDef head fill:#f81,stroke:#333,stroke-width:2px;
-       class l1,l2,l3 label
-       class HEAD head
-   </div>
-
-   Only the label for `bugfix3` was removed. As `main` points to the same commit that `bugfix3` used
-   to point to, we don't have any "dangling commits" that we might loose access to.
-
-4. Our colleague reports back to us on `feature1` and made a small change (*c9*), which we now want
+3. Our colleague reports back to us on `feature1` and made a small change (*c9*), which we now want
    to pull into our local `feature1` branch.  As we don't want to pull it into the `main` branch just
    yet, we switch to the `feature1` branch with `git checkout feature1` and then use 
    `git pull origin feature1` to pull the commit to our current branch.
@@ -362,15 +334,16 @@ merge it into the `main` branch.
        l1([main]) --> c8
        l2([feature1]) --> c9
        l3([feature2]) --> c6
+       l4([bugfix3]) --> c8
        HEAD([HEAD]) --> l2
    
        classDef label fill:#ff1,stroke:#333,stroke-width:2px;
        classDef head fill:#f81,stroke:#333,stroke-width:2px;
-       class l1,l2,l3 label
+       class l1,l2,l3,l4 label
        class HEAD head
    </div>
 
-5. After one more round of testing, we decide that `feature1` is ready to be merged into `main`.
+4. After one more round of testing, we decide that `feature1` is ready to be merged into `main`.
    We `git checkout main` and then use `git merge feature1`.  This is not a fast-forward merge as 
    branches `main` and `feature1` have diverged.  This merge will cause a merge commit *c10* to be
    created that combines the content of *c8* and *c9*.
@@ -401,15 +374,115 @@ merge it into the `main` branch.
        l1([main]) --> c10
        l2([feature1]) --> c9
        l3([feature2]) --> c6
+       l4([bugfix3]) --> c8
        HEAD([HEAD]) --> l1
    
        classDef label fill:#ff1,stroke:#333,stroke-width:2px;
        classDef head fill:#f81,stroke:#333,stroke-width:2px;
        classDef commit fill:#D0D0FF,stroke:#9370DB,stroke-width:2px;
-       class l1,l2,l3 label
+       class l1,l2,l3,l4 label
        class HEAD head
        class c10 commit
    </div>
+
+## Cleaning up
+
+1. We can now delete the branch `bugfix3`, because we no longer need it. We do this with the command
+   `git branch -d bugfix3`:
+
+   <div class="mermaid">
+   flowchart RL
+       c0((c0))
+       c1((c1)) ==> c0
+       c2((c2)) ==> c1
+       c3((c3)) ==> c1
+       c4((c4)) ==> c3
+       c5((c5)) ==> c4
+       c6((c6)) ==> c2
+       c7((c7)) ==> c2
+       c8((c8)) ==> c7
+       c9((c9)) ==> c5
+       c10((c10)) ==> c8
+       c10((c10)) ==> c9
+   
+       l1([main]) --> c10
+       l2([feature1]) --> c9
+       l3([feature2]) --> c6
+       HEAD([HEAD]) --> l1
+   
+       classDef label fill:#ff1,stroke:#333,stroke-width:2px;
+       classDef head fill:#f81,stroke:#333,stroke-width:2px;
+       classDef commit fill:#D0D0FF,stroke:#9370DB,stroke-width:2px;
+       class l1,l2,l3,l4 label
+       class HEAD head
+       class c10 commit
+   </div>
+
+   Only the label for `bugfix3` was removed. As `main` points to the same commit that `bugfix3` used
+   to point to, we don't have any "dangling commits" that we might loose access to.
+   The branch `feature1` can be removed the same way.
+
+2. What will happen if we want to delete branch `feature2`?
+
+   ~~~
+   $ git branch -d feature2
+   ~~~
+   {: .bash}
+   ~~~
+   $ git branch -d feature2
+   error: The branch 'feature2' is not fully merged.
+   If you are sure you want to delete it, run 'git branch -D feature2'.
+   ~~~
+   {: .output}
+
+   > ## Careful when deleting un-merged branches.
+   >
+   > Here Git warns us that we are about to delete a branch that has not been merged.
+   > Without the "label" that is the branch name, we are about to loose access to those commits that
+   > have not been merged.  Those commits could be irrevocably lost.
+   >
+   > The error message will tell us how we can delete the branch anyway.
+   > As this feature was only an experiment and didn't quite turn out how we had hoped, we will 
+   > in fact delete it:
+   > 
+   > ~~~
+   > $ git branch -D feature2
+   > ~~~
+   {: .callout}
+
+   <div class="mermaid">
+   flowchart RL
+       c0((c0))
+       c1((c1)) ==> c0
+       c2((c2)) ==> c1
+       c3((c3)) ==> c1
+       c4((c4)) ==> c3
+       c5((c5)) ==> c4
+       c6((c6)) --> c2
+       c7((c7)) ==> c2
+       c8((c8)) ==> c7
+       c9((c9)) ==> c5
+       c10((c10)) ==> c8
+       c10((c10)) ==> c9
+   
+       l1([main]) --> c10
+       HEAD([HEAD]) --> l1
+   
+       classDef label fill:#ff1,stroke:#333,stroke-width:2px;
+       classDef head fill:#f81,stroke:#333,stroke-width:2px;
+       classDef commit fill:#D0D0FF,stroke:#9370DB,stroke-width:2px;
+       classDef lostcommit fill:#D0D0FF,stroke:#9370DB,stroke-width:2px,opacity:0.4;
+       linkStyle 5 opacity:0.3;
+       class l1,l2,l3,l4 label
+       class HEAD head
+       class c10 commit
+       class c6 lostcommit
+   </div>
+
+   Commit c6 is not lost right away but still remains in the depth of the git repo until the garbage
+   collection will remove it. 
+   The only way we can get it back is if we still have a record of the commit ID.
+
 
 ## Recap
 
