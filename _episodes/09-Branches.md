@@ -3,11 +3,23 @@ title: "Branches"
 teaching: 0
 exercises: 0
 questions:
-- "Learn how to work with branches."
+- "What are git branches?"
+- "Why, when and how are branches used?"
 objectives:
-- "First learning objective. (FIXME)"
+- "Learn how to create branches."
+- "Learn how to switch branches."
+- "Learn how to merge branches."
+- "Learn how to delete unused branches."
 keypoints:
-- "First key point. Brief Answer to questions. (FIXME)"
+- "`git branch bname` creates a new branch `bname` from the currently checked-out commit."
+- "`git checkout bname` switches the workspace to the branch `bname`."
+- "`git checkout -b bname` combines the commands `git branch bname` and `git checkout bname` \
+   and creates the new branch `bname` and switches to it with the same command."
+- "`git merge bname` merges the branch `bname` into the currently active branch. \
+   It's always the currently active (checked-out) branch that is being changed."
+- "`git branch -d bname` deletes a branch that has been merged."
+- "To delete un-merged branches, we have to force git to delete them by using `-D` instead of `-d`. \
+   This is to prevent accidentally deleting those branches and loosing data."
 ---
 {% include mermaid.html %}
 
@@ -484,17 +496,6 @@ merge it into the `main` branch.
    The only way we can get it back is if we still have a record of the commit ID.
 
 
-## Recap
-
-> ## Git commands for managing branches
->
-> * `git branch branchname` creates a new branch `branchname` from the currently checked-out commit.
-> * `git checkout branchname` switches the workspace to the branch `branchname`.
-> * `git checkout -b bname` combines the commands `git branch bname` and `git checkout bname`
->   and creates the new branch `bname` and switches to it with the same command.
-> * `git merge bname` merges the branch `bname` into the currently active branch.
->   It's always the currently active (checked-out) branch that is being changed.
-{: .checklist}
 
 <!-----
 > ## Callout Title
