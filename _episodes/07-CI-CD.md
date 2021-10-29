@@ -38,27 +38,33 @@ changed or uploading release-bundles anytime a new version is tagged --
 however always under the condition that all tests are passing. 
 Together they are commonly referred to as a **CI/CD Pipeline**.
 
-For GitHub there is an external service called [Travis-CI][travis], 
-GitLab and Bitbucket have CI/CD-pipelines directly build-in.
+The three major Git-Hosting websites have CI/CD-pipelines directly build-in:
+[GitHub Actions][gh-actions], [GitLab-CI][gl-ce-ci] and 
+[Bitbucket Pipelines][bb-piplelines] and besides that there are also external
+services like [Travis-CI][travis] and [Circle-CI][circle-ci].
+
 All of those services count the number of minutes these pipelines run on their 
 servers and have different restrictions on how long the service can be used
 for free and from which point a project has to pay:
 
-* Travis-CI offers unlimited pipeline minutes for free for public repositories,
-  while they charge for building/testing private repositories.
-* GitLab.com's free plan includes 2,000 CI pipeline minutes per group per month.
+* GitHub Actions's free plan includes 2,000 pipeline minutes/month for public
+  repositories.
+* GitLab.com's free plan includes 400 CI pipeline minutes per group per month.
 * Bitbucket's free plan includes 50 pipeline minutes per month and their 
   Academic plan includes 500 free minutes per month.
 
-(as of October 2018)
+(as of October 2021)
 
-GitLab also allows to use your own GitLab runners that are running on your
-computer. 
+Both GitHub and GitLab also allow you to use your own GitLab runners that are
+running on your computer. Using private runners is free of charge and the
+minutes that these runners are working are not billed.
 
 These three CI-pipeline services have in common that they are configured
-with a single text file in the [YAML][yaml] format, which is placed in the
-root directory of a project under a specific name: `.travis.yml` for Travis-CI,
-`.gitlab-ci.yml` for GitLab and `bitbucket-pipelines.yml` for Bitbucket.
+with a single text file in the [YAML][yaml] format, which for GitHub Actions
+is placed in a directory called `.github/workflows` and for other services into
+root directory of a project the a specific name: 
+`.gitlab-ci.yml` for GitLab, `bitbucket-pipelines.yml` for Bitbucket and 
+`.travis.yml` for Travis-CI,.
 
 These files need to contain information about all steps that are needed to 
 test and optionally deploy the software.  Typical steps include:
@@ -86,24 +92,34 @@ supported languages which can be used as a starting point.
 The examples below all do basically the same thing: running the unit-tests
 of a Python project after installing all dependencies.
 The Travis and GitLab examples run the tests with two versions of Python
-(2.7 and 3.6) the Bitbucket example only tests with Python 3.6.
+(2.7 and 3.8) the Bitbucket example only tests with Python 3.8.
 
 
-#### Travis-CI:
-[Travis-CI tutorial][travis-turorial]
+#### GitHub Actions:
+[GitHub Actions Quickstart][gh-actions-quickstart]
 ~~~
-# .travis.yml
-language: python
-python:
-  - "3.6"
-  - "2.7"
-# step to install dependencies
-install:
-  - python -V
-  - "pip install -r requirements.txt"
-# step to run tests
-script: 
-  - pytest -v
+name: learn-github-actions
+on: [push]
+jobs:
+  test-my-python-code:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [2.7, 3.8]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: "pip install -r requirements.txt"
+
+      - name: Test with pytest
+        run: pytest
 ~~~
 {: .language-yaml }
 
@@ -111,8 +127,8 @@ script:
 [GitLab-CI Quickstart][gitlab-ce-ci-quickstart]
 ~~~
 # .gitlab-ci.yml
-test:3.6:
-  image: python:3.6
+test:3.8:
+  image: python:3.8
   # step to install dependencies
   before_script:
     - python -V
@@ -138,7 +154,7 @@ test:2.7:
 [Getting Started with Bitbucket Pipelines][bitbucket-pipleline-getting-started]
 ~~~
 # bitbucket-pipelines.yml
-image: python:3.6
+image: python:3.8
 pipelines:
   default:
     # step to install dependencies
@@ -157,18 +173,23 @@ pipelines:
 ~~~
 {: .language-yaml }
 
-> ## Getting Started with GitHub and Travis-CI
-> 1. Go to [Travis-ci.com][travis] and Sign up with GitHub.
-> 2. Accept the Authorization of Travis CI. You’ll be redirected to GitHub.
-> 3. Click the green Activate button, and select the repositories you want to use with Travis CI.
-> 4. Co to the cloned `testing_demo` repository on your computer.
-> 5. Copy the prepared `more_files/.travis.yml` file into the root directory,
+> ## Getting Started with GitHub Actions
+> 1. Go to the cloned `testing_demo` repository on your computer.
+> 2. Create the `.github` and `.github/workflows` directories:
+>    ~~~
+>    mkdir .github
+>    mkdir .github/workflows
+>    ~~~
+>    {: .language-bash}
+> 5. Copy the prepared `more_files/.github-actions.yml` file to the 
+>    `.github/workflows` directory, as well as the `requirements.txt` to the root,
 >    then commit the change and push to GitHub:
 >    ~~~
->    testing_demo $  cp  more_files/.travis.yml       ./
+>    testing_demo $  cp  more_files/.github-actions.yml  .github/workflows
 >    testing_demo $  cp  more_files/requirements.txt  ./
->    testing_demo $  git add .travis.yml
->    testing_demo $  git commit -m "add Travis-CI config"
+>    testing_demo $  git add .github/workflows
+>    testing_demo $  git add requirements.txt
+>    testing_demo $  git commit -m "add GitHub Actions"
 >    testing_demo $  git push origin main
 >    ~~~
 >    {: .language-bash}

@@ -47,11 +47,11 @@ into the original repository from the website and thereby close the pull-request
 >    more_files  mean.py  README.md  Workflow.md
 >    ~~~
 >    {: .output}
-> 3. Download the file `test_mean.py` and copy it into the cloned repo
->    (Into the same folder that contains `README.md` and `mean.py`).
+> 3. Move the file `test_mean.py` from the `more_files` directory to the root
+     of the repo. (the same folder that contains `README.md` and `mean.py`).
 > 4. Add the file `test_mean.py`, make a commit and push to GitHub:
 >    ~~~
->    $ cp more_files/test_mean.py  ./
+>    $ mv more_files/test_mean.py  ./
 >    $ git add test_mean.py
 >    $ git commit -m "adding unit tests"
 >    $ git push origin main
