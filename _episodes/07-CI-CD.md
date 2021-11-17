@@ -173,6 +173,7 @@ pipelines:
 ~~~
 {: .language-yaml }
 
+
 > ## Getting Started with GitHub Actions
 > 1. Go to the cloned `testing_demo` repository on your computer.
 > 2. Create the `.github` and `.github/workflows` directories:
@@ -206,12 +207,91 @@ pipelines:
 {: .challenge}
 
 
+### A Second Look at the Pipeline definitions
+
+Let's have another look at the pipeline definitions to see what they are actually doing.
+
+#### GitHub Actions revisited:
+
+Let's go over this workflow line by line:
+
+* `name: learn-github-actions` -- This is defines the name of the workflow and will appear in the
+  'Actions' tab of the GitHub repository.
+* `on: [push]` -- This specifies that this workflow should be executed whenever commits are pushed
+  to the repository. It is possible to set the pipeline to only run for pull-requests or to only
+  run the workflow only on certain branches or paths or tags. 
+  See: [Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#onpushpull_requestbranchestags)
+* An event (like a push) triggers the workflow that can consist of one or more jobs and each job can 
+  consist of one or more steps:
+  ```yaml
+jobs:
+  job1:
+    steps:
+      - run:  command
+      - run:  command
+  job2:
+    steps:
+      - run:  command
+      - run:  command
+```
+* Also the name for each job can be defined, e.g. `job1` and `job2` or something more descriptive
+  like `test-my-python-code`.
+* `runs-on: ubuntu-latest` -- This configures the job to run on an Ubuntu Linux runner. Each job 
+  will run on a fresh virtual machine (or container). 
+  See [Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on)
+* `strategy:` > `matrix:` > `python-version: [2.7, 3.8]` -- this defines that this job should be executed
+  multiple times with two different Python versions. The test matrix could also involve multiple
+  operating systems (e.g. Linux, Windows, macOS), however keep in mind that testing with e.g. three 
+  python-versions on three different operating systems already generates 9 jobs. Running all of these
+  on every commit can quickly deplete the available pipeline-minutes.
+  
+  
+  
+  
+~~~
+jobs:
+  test-my-python-code:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [2.7, 3.8]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: "pip install -r requirements.txt"
+
+      - name: Test with pytest
+        run: pytest
+~~~
+{: .language-yaml }
+
+
+
 ### Other CI solutions
 
-There are also other -- previous generation -- Build/CI/CD tools like 
-[Jenkins][jenkins], that you can install on your own machine and use with 
-any version control solution.  Their use however is quite different from 
-the services introduced above and they are beyond the scope of this lesson.
+There are also other Build/CI/CD services and tools that can be use as an 
+alternative to those provided by the Git-Hosting services.
 
+The cloud services [Travis-CI][travis] and [Circle-CI][circle-ci] work similar 
+to the methods described above, in that they are also controlled by [YAML][yaml] 
+files that are added to the repositories. The only additional steps that are needed 
+is to sign up for an account with the service and to link the cloud-service to the 
+repository in the project's settings menu under "Integrations".
+
+[Jenkins][jenkins] and other similar tools, been around much longer than the services described 
+above, and it requires that you can install on your own machine and can be used with any version 
+control solution.  Running the pipelines can then either be triggered by web-hooks (the Source code
+repository calls a certain URL when a new commit has been pushed) or on a defined schedule (cron-job).
+Jenkins also doesn't use [YAML][yaml] to describe the pipelines, but has its own "Domain Specific 
+Language" for it's `Jenkinsfile`s.
+Also in terms of their use however is quite different from the services introduced above and they 
+are beyond the scope of this lesson.
 
 {% include links.md %}
