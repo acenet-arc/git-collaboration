@@ -16,3 +16,4 @@ vendor/
 .docker-vendor/
 Gemfile.lock
 .*history
+_episodes/99-GitDiagram_test.md
