@@ -75,3 +75,8 @@
 [gh-pages]: https://pages.github.com/
 [gl-pages]: https://gitlab.com/help/user/project/pages/index.md
 [bb-pages]: https://confluence.atlassian.com/bitbucket/publishing-a-website-on-bitbucket-cloud-221449776.html
+
+[gh-actions-onpush]: https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#onpushpull_requestbranchestags
+[gh-actions-runson]: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
+[gh-actions-checkout]: https://github.com/actions/checkout
+[gh-actions-setuppython]: https://github.com/actions/setup-python
