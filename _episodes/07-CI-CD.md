@@ -99,27 +99,35 @@ The Travis and GitLab examples run the tests with two versions of Python
 [GitHub Actions Quickstart][gh-actions-quickstart]
 {% raw %}
 ~~~
+# .github/workflows/github-actions.yml
 name: learn-github-actions
 on: [push]
 jobs:
   test-my-python-code:
+    # select the os-image these jobs should run on
     runs-on: ubuntu-latest
+    
+    # define the Python versions that should be used
     strategy:
       matrix:
         python-version: [2.7, 3.8]
 
     steps:
+      # step to check out the repository
       - uses: actions/checkout@v2
 
+      # step to create the Python environment
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
 
+      # step to install the dependencies
       - name: Install dependencies
         run: "pip install -r requirements.txt"
 
-      - run: pytest
+      # step to run tests
+      - run: pytest -v
 ~~~
 {: .language-yaml }
 {% endraw %}
@@ -128,9 +136,9 @@ jobs:
 #### GitLab-CI:
 [GitLab-CI Quickstart][gitlab-ce-ci-quickstart]
 ~~~
-# .gitlab-ci.yml
-test:3.8:
-  image: python:3.8
+# ./.gitlab-ci.yml
+test:2.7:
+  image: python:2.7
   # step to install dependencies
   before_script:
     - python -V
@@ -139,9 +147,8 @@ test:3.8:
   script:
     - pytest -v
 
-# .gitlab-ci.yml
-test:2.7:
-  image: python:2.7
+test:3.8:
+  image: python:3.8
   # step to install dependencies
   before_script:
     - python -V
@@ -155,7 +162,7 @@ test:2.7:
 #### Bitbucket-Pipeline:
 [Getting Started with Bitbucket Pipelines][bitbucket-pipleline-getting-started]
 ~~~
-# bitbucket-pipelines.yml
+# ./bitbucket-pipelines.yml
 image: python:3.8
 pipelines:
   default:
@@ -241,7 +248,7 @@ jobs:
       - name: Install dependencies
         run: "pip install -r requirements.txt"
 
-      - run: pytest
+      - run: pytest -v
 ~~~
 {: .language-yaml }
 {% endraw %}
@@ -318,7 +325,7 @@ jobs:
   * This step just runs the command `pytest`.  That wasn't too hard, was it?
     {% raw %}
     ~~~yaml
-      - run:  pytest
+      - run:  pytest -v
     ~~~
     {% endraw %}
 

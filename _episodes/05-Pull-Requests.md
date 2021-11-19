@@ -51,7 +51,7 @@ into the original repository from the website and thereby close the pull-request
      of the repo. (the same folder that contains `README.md` and `mean.py`).
 > 4. Add the file `test_mean.py`, make a commit and push to GitHub:
 >    ~~~
->    $ mv more_files/test_mean.py  ./
+>    $ cp more_files/test_mean.txt  ./test_mean.py
 >    $ git add test_mean.py
 >    $ git commit -m "adding unit tests"
 >    $ git push origin main
