@@ -54,11 +54,16 @@
 [gitlab-ce]: https://about.gitlab.com/install/?version=ce
 [gitea]: https://gitea.io/
 [travis]: https://travis-ci.com/
+[circle-ci]: https://circleci.com/
 [jenkins]: https://jenkins.io/
 [wp-code-review]: https://en.wikipedia.org/wiki/Code_review
-[travis-turorial]: https://docs.travis-ci.com/user/tutorial/
+[gh-actions]: https://docs.github.com/en/actions
+[gh-actions-quickstart]: https://docs.github.com/en/actions/quickstart
+[gl-ce-ci]: https://docs.gitlab.com/ce/ci/
 [gitlab-ce-ci-quickstart]: https://docs.gitlab.com/ce/ci/quick_start/README.html
-[bitbucket-pipleline-getting-started]: https://confluence.atlassian.com/bitbucket/get-started-with-bitbucket-pipelines-792298921.html
+[bb-piplelines]: https://support.atlassian.com/bitbucket-cloud/docs/build-test-and-deploy-with-pipelines/
+[bitbucket-pipleline-getting-started]: https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/
+[travis-turorial]: https://docs.travis-ci.com/user/tutorial/
 [semver]: https://semver.org/
 [zenodo]: https://zenodo.org
 [markdown]: https://daringfireball.net/projects/markdown/syntax
@@ -70,3 +75,8 @@
 [gh-pages]: https://pages.github.com/
 [gl-pages]: https://gitlab.com/help/user/project/pages/index.md
 [bb-pages]: https://confluence.atlassian.com/bitbucket/publishing-a-website-on-bitbucket-cloud-221449776.html
+
+[gh-actions-onpush]: https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#onpushpull_requestbranchestags
+[gh-actions-runson]: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
+[gh-actions-checkout]: https://github.com/actions/checkout
+[gh-actions-setuppython]: https://github.com/actions/setup-python

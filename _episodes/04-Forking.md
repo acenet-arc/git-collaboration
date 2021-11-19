@@ -41,7 +41,7 @@ that copy and can work on implementing an enhancement or fixing a bug.
 
 > ## Create a Fork
 >
-> 1. Go to your instructor's `testing_demo` repository on GitHub.
+> 1. Go to **your instructor's** `testing_demo` repository on GitHub.
 > 2. Click on the "Fork" button.
 > 3. Wait a few moments until the repository has been copied
 > 4. Explore your forked repository.
