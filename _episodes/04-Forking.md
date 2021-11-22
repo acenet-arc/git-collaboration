@@ -12,6 +12,7 @@ keypoints:
 - "This can be the base for contributing these changes back to the original project."
 - "Sometimes however it is used to initiate an independent spin-off that will diverge over time."
 ---
+{% include mermaid.html %}
 
 Forking a repository on a Git hosting site creates a copy of the repository
 under your own user-account, thereby keeping a link to the original repository.
@@ -28,7 +29,7 @@ by a process called "Pull Request" or "Merge Request" (more on that later).
 >
 > Instead of forking a repository, you can also choose to import a repository.
 > This also runs a `git clone ...` on the server, however removes the link
-> to the original repository.  The two repositories are now separated and 
+> to the original repository.  The two repositories are now separated and
 > independent from each other.
 >
 > Importing repositories also works across different platforms.
@@ -47,5 +48,31 @@ that copy and can work on implementing an enhancement or fixing a bug.
 > 4. Explore your forked repository.
 >
 {: .challenge}
+
+> ## Fork the correct repository!
+>
+> The idea here is that
+> * the **instructor** forks the *original* (template) testing_demo repository and
+> * the **workshop attendees** will fork the *instructor's fork* of the testing_demo repo.
+>
+> In the end, the fork-tree should look something like this for a workshop with
+> five attendees:
+>
+> <div class="mermaid">
+> flowchart RL
+>   A( acenet-arc /<br />testing_demo ) ;
+>   B[ instructor /<br /> testing_demo ] -- fork of --> A ;
+>   subgraph Used in the workshop
+>   C1[ attendee1 /<br /> testing_demo ] -- fork of --> B ;
+>   C2[ attendee2 /<br /> testing_demo ] -- fork of --> B ;
+>   C3[ attendee3 /<br /> testing_demo ] -- fork of --> B ;
+>   C4[ attendee4 /<br /> testing_demo ] -- fork of --> B ;
+>   C5[ attendee5 /<br /> testing_demo ] -- fork of --> B ;
+>   end
+> </div>
+>
+> The original repository will remain in its initial state and issues and
+> pull-requests will only be created towards the *instructor's fork* of the repository.
+{: .callout}
 
 {% include links.md %}

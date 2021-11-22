@@ -47,8 +47,8 @@ into the original repository from the website and thereby close the pull-request
 >    more_files  mean.py  README.md  Workflow.md
 >    ~~~
 >    {: .output}
-> 3. Move the file `test_mean.py` from the `more_files` directory to the root
-     of the repo. (the same folder that contains `README.md` and `mean.py`).
+> 3. Copy the file `test_mean.txt` from the `more_files` directory to the root of the repo
+>    as `test_mean.py`. (the same folder that contains `README.md` and `mean.py`).
 > 4. Add the file `test_mean.py`, make a commit and push to GitHub:
 >    ~~~
 >    $ cp more_files/test_mean.txt  ./test_mean.py
@@ -58,6 +58,7 @@ into the original repository from the website and thereby close the pull-request
 >    ~~~
 >    {: .language-bash}
 > 5. Go back to the GitHub website and open a pull-request (button: [New Pull Request]).
+>    Make sure to open the pull-request towards **the instructor's fork** of the repository.
 >
 {: .challenge}
 
@@ -105,7 +106,7 @@ into the original repository from the website and thereby close the pull-request
 > * code must have proper documentation
 > * code must have associated unit tests
 > * all tests must pass
-> * pull-requests must be made against a certain branch
+> * pull-requests must be made towards a certain branch
 >
 > But it often also contains things like:
 > * Links to external documentation, mailing lists, or a code of conduct.
