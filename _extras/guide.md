@@ -65,25 +65,30 @@ This is all done on the website.
 
 ### 7. Continuous Integration (CI)
 
-In the episode [Code Review]({{ site.baseurl }}/07-CI-CD) prepared workflow files are used
+In the episode [Continuous Integration]({{ site.baseurl }}/07-CI-CD) prepared workflow files are used
 to enable Continuous Integration pipelines.
 
 The commands are in the call-out box [Getting Started with GitHub Actions]({{ site.baseurl }}/07-CI-CD/#getting-started-with-github-actions-1)
 
 ### 8. Tags and Releases
 
-FIXME
+In the episode [Tags and Releases]({{ site.baseurl }}/08-Tags-Releases/) a release (and the
+accompanying tag) are created on the repository's website.
+Also the topics of semantic versioning and citable releases are discussed.
 
 ### 9. Branches
 
-FIXME
+The episode [Branckes]({{ site.baseurl}}/09-Branches/) introduces the concept of branches and uses
+the [Git Sandbox][learnGitSandbox] to practice the different commands.
 
 ### 10. Integrated Wiki
 
-FIXME
+The episode [Integrated Wiki]({{ site.baseurl}}/10-Wiki/) introduces the Markdown syntax
+and how to use it on the Wiki modules that are integrated into the platforms.
 
 ### 11. Pages
 
-FIXME
+The episode [Pages]({{ site.baseurl}}/11-Pages/) shows how to host a static website with GitHub
+Pages and gives pointers how to do the same with GitLab pages and Bitbucket.
 
 {% include links.md %}
