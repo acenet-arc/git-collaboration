@@ -39,7 +39,8 @@ and Bitbucket.
 
 ### 3. Issue Tracker
 
-FIXME
+In the episode [Issue Tracker]({{ site.baseurl }}/03-Issues/) demonstrates the use of the Issue
+Tracker.
 
 ### 4. Forking a Repository
 

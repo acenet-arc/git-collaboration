@@ -439,7 +439,7 @@ merge it into the `main` branch.
    ~~~
    $ git branch -d feature2
    ~~~
-   {: .bash}
+   {: .language-bash}
    ~~~
    $ git branch -d feature2
    error: The branch 'feature2' is not fully merged.
@@ -447,7 +447,7 @@ merge it into the `main` branch.
    ~~~
    {: .output}
 
-   > ## Careful when deleting un-merged branches.
+   > ## Be Careful When Deleting Un-merged Branches.
    >
    > Here Git warns us that we are about to delete a branch that has not been merged.
    > Without the "label" that is the branch name, we are about to loose access to those commits that
@@ -460,6 +460,7 @@ merge it into the `main` branch.
    > ~~~
    > $ git branch -D feature2
    > ~~~
+   > {: .language-bash}
    {: .callout}
 
    <div class="mermaid">

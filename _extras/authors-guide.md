@@ -10,13 +10,16 @@ permalink: /author-guide/
 to write various graphs and flow-charts within Markdown and render them on a website. 
 
 To enable Mermaid support add the following line to any page:
+
 {% comment %}
 As you are reading the source-code:
 Just add the  `{% include mermaid.html %}` and not the `{% raw %}` and `{% endraw %}`.
 {% endcomment %}
+
 ```
 {% raw %}{% include mermaid.html %}{% endraw %}
 ```
+{: .source}
 Then mermaid graphs can be used as shown below.
 
 ### Git Graph
@@ -41,6 +44,7 @@ commit
 merge newbranch
 </div>
 ```
+{: .language-html}
 
 <div class="mermaid">
 gitGraph:
@@ -72,6 +76,7 @@ graph LR
     C -->|Two| E[Result two]
 </div>
 ```
+{: .language-html}
 
 <div class="mermaid">
 graph LR
