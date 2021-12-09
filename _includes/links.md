@@ -70,8 +70,8 @@
 [github-markdown]: https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown
 [gitlab-markdown]: https://docs.gitlab.com/ce/user/markdown.html#gitlab-flavored-markdown-gfm
 [bitbucket-markdown]: https://confluence.atlassian.com/bitbucketserver/markdown-syntax-guide-776639995.html
-[learnGitBranching]: https://pcottle.github.io/learnGitBranching/
-[learnGitSandbox]: https://pcottle.github.io/learnGitBranching/?NODEMO
+[learnGitBranching]: https://learngitbranching.js.org/
+[learnGitSandbox]: https://learngitbranching.js.org/?NODEMO
 [gh-pages]: https://pages.github.com/
 [gl-pages]: https://gitlab.com/help/user/project/pages/index.md
 [bb-pages]: https://confluence.atlassian.com/bitbucket/publishing-a-website-on-bitbucket-cloud-221449776.html

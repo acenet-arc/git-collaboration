@@ -19,12 +19,13 @@ keypoints:
 1. `git add`    - adds a file to the staging area.
 1. `git commit` - store staged changes as a new change-set (commit).
 1. `git diff`   - show differences between versions. By default the difference 
-                 between working directory and staging area.
+                  between working directory and staging area.
 1. `git log`    - shows list of versions (commits).
 1. `git checkout` - recover old versions of files and switch branches.
 1. `git remote` - adds or changes the location of the remote report.
 1. `git push`   - copy commits from local repository to remote repository.
-1. `git pull`   - copy commits from remote repository to local repository.
+1. `git pull`   - copy commits from remote repository to local repository (fetch)
+                  and integrate (merge) them into working directory.
 1. `git clone`  - creates a local copy of a remote repository.
 
 ## Recap: the Git working Cycle

@@ -40,7 +40,7 @@ without breaking the code in the main development branch.
 > ## Git Sandbox
 >
 > We will practice a bit in an online "Git Sandbox" at:
-> [https://pcottle.github.io/learnGitBranching/?NODEMO][learnGitSandbox]
+> [https://learngitbranching.js.org/?NODEMO][learnGitSandbox]
 >
 > The *Git Sandbox* lets us use simplified commands such as `git add`, `git commit`, `git status`, 
 > `git checkout`, `git branch`, `git merge`. In this simplified environment we can skip the steps of
@@ -496,7 +496,13 @@ merge it into the `main` branch.
    collection will remove it. 
    The only way we can get it back is if we still have a record of the commit ID.
 
+## Homework
 
+> ## Practice what you have learned.
+> Working with branches can be a bit daunting at the start.  Please practice this for 
+> yourself using the [guided tutorial from Learn Git Branching][learnGitBranching] 
+> and/or experiment in their [Git Sandbox][learnGitSandbox] like we did in this lesson.
+{: .challenge}
 
 <!-----
 > ## Callout Title
