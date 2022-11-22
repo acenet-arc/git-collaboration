@@ -47,7 +47,7 @@ similar happen 2 years ago? How exactly did we solve it?"*)
 
 > ## Create an Issue
 >
-> 1. Go to your `planets` repository on GitHub from the first Git workshop,
+> 1. Go to your `recipes` repository on GitHub from the first Git workshop,
 >    (or to the one of your instructor).
 > 2. Switch to the *Issues* tab
 > 3. Click  on _[New Issue]_
