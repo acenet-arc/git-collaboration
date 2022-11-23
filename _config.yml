@@ -8,7 +8,6 @@
 # lc: Library Carpentry
 # cp: Carpentries (to use for instructor traning for instance)
 carpentry: "swc"
-baseurl: /cgeroux/git-collaboration/
 
 # Overall title for pages.
 title: "Git Collaboration"
