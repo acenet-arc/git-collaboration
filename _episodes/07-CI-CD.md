@@ -1,7 +1,7 @@
 ---
 title: "Continuous Integration (CI)"
-teaching: 10
-exercises: 5
+teaching: 15
+exercises: 10
 questions:
 - "How can I run tests automatically?"
 objectives:

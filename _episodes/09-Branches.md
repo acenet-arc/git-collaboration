@@ -1,7 +1,7 @@
 ---
 title: "Branches"
-teaching: 0
-exercises: 0
+teaching: 15
+exercises: 15
 questions:
 - "What are git branches?"
 - "Why, when and how are branches used?"

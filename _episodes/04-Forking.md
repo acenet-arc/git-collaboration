@@ -1,7 +1,7 @@
 ---
 title: "Forking a Repository"
-teaching: 5
-exercises: 3
+teaching: 10
+exercises: 10
 questions:
 - "How can I make an online copy of a repository on which I can work?"
 objectives:

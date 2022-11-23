@@ -1,7 +1,7 @@
 ---
 title: "Issue Tracker"
-teaching: 7
-exercises: 3
+teaching: 15
+exercises: 5
 questions:
 - "How do I use Issues?"
 objectives:

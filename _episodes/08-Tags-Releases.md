@@ -1,7 +1,7 @@
 ---
 title: "Tags and Releases"
 teaching: 10
-exercises: 3
+exercises: 5
 questions:
 - "How do you create releases of your project?"
 objectives:
