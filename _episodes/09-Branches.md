@@ -486,9 +486,12 @@ This is not a fast-forward merge as
 </li>
 </ol>
 ## Cleaning up
-
-1. We can now delete the branch `bugfix3`, because we no longer need it. We do this with the command
-   `git branch -d bugfix3`:
+<ol>
+<li markdown="1">We can now delete the branch `bugfix3`, because we no longer need it. We do this with the command:
+~~~
+$ git branch -d bugfix3
+~~~
+{: .language-bash}
 
    <div class="mermaid">
    flowchart RL
@@ -521,20 +524,23 @@ This is not a fast-forward merge as
    Only the label for `bugfix3` was removed. As `main` points to the same commit that `bugfix3` used
    to point to, we don't have any "dangling commits" that we might loose access to.
    The branch `feature1` can be removed the same way.
+</li>
+<li markdown="1">
+What will happen if we want to delete branch `feature2`?
+This is actually a place where the *Git sandbox* diverges from git. Normally with git if you use the `-d` option to delete a branch, it won't delete a branch which isn't fully merged.
+~~~
+$ git branch -d feature2
+~~~
+{: .language-bash}
+~~~
+error: The branch 'feature2' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D feature2'.
+~~~
+{: .output}
 
-2. What will happen if we want to delete branch `feature2`?
-   This is actually a place where the *Git sandbox* diverges from git. Normally with git if you use the `-d` option to delete a branch, it won't delete a branch which isn't fully merged.
-   ~~~
-   $ git branch -d feature2
-   ~~~
-   {: .language-bash}
-   ~~~
-   error: The branch 'feature2' is not fully merged.
-   If you are sure you want to delete it, run 'git branch -D feature2'.
-   ~~~
-   {: .output}
-   However, in *Git Sandbox* it will happily do this.
-
+However, in *Git Sandbox* it will happily do this.
+</li>
+</ol>
    > ## Be Careful When Deleting Un-merged Branches.
    >
    > Here Git warns us that we are about to delete a branch that has not been merged.
