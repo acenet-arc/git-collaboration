@@ -1,6 +1,6 @@
 ---
 title: "Integrated Wiki"
-teaching: 0
+teaching: 10
 exercises: 0
 questions:
 - "Where can I keep some simple documentation pages?"

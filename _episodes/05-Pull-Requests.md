@@ -1,7 +1,7 @@
 ---
 title: "Pull Requests"
 teaching: 15
-exercises: 5
+exercises: 10
 questions:
 - "How do I contribute changes to someone else's project?"
 objectives:

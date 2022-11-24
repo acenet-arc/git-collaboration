@@ -1,13 +1,13 @@
 ---
 title: "Forking a Repository"
-teaching: 5
-exercises: 3
+teaching: 10
+exercises: 10
 questions:
 - "How can I make an online copy of a repository on which I can work?"
 objectives:
 - "Create an online copy of a repository under your own account."
 keypoints:
-- "My forking a repository you create a copy under your own account."
+- "By forking a repository you create a copy under your own account."
 - "You can use this 'fork' to develop you own feature or fix a bug that's bugging you."
 - "This can be the base for contributing these changes back to the original project."
 - "Sometimes however it is used to initiate an independent spin-off that will diverge over time."
