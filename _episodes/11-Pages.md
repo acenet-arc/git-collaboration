@@ -20,9 +20,9 @@ and you want to host a small website using your own design or an amount of
 content that exceeds the capabilities of Wiki pages.
 
 GitHub, GitLab.com and Bitbucket offer hosting pages directly from a Git repository.
-Whey you create a repository with the name `<username>.github.io`, the content 
-of that repository will be available under "https://<username>.github.io".
-Other repositories can be set serve pages under "https://<username>.github.io/<reponame>".
+When you create a repository with the name `<username>.github.io`, the content
+of that repository will be available under "https://&lt;username&gt;.github.io".
+Other repositories can be set serve pages under "https://&lt;username&gt;.github.io/&lt;reponame&gt;".
 
 The same methodology applies to GitLab and Bitbucket with the `<username>.gitlab.io`
 and `<username>.bitbucket.io` domains respectively.  GitHub and GitLab also 
