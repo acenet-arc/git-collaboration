@@ -23,7 +23,7 @@ a version number, as it helps identifying the exact version a user is using when
 tracking down problems.  This is referred to as "Releasing a Software" or
 "Making a (Software) Release".
 
-### Releases and Tags
+## Releases and Tags
 
 Making a release of a software project that is managed by a version control
 system like Git is done essentially by creating a  so called *Tag*, a name/label
@@ -74,7 +74,7 @@ Creating a Release typically consists of the following steps:
 6. **Change the version attribute** in the source code by appending e.g. `-dev`
    and commit that change, to indicate that the source-tree is in a development state.
 
-### Semantic Versioning
+## Semantic Versioning
 
 [Semantic Versioning][semver] is a versioning scheme that carries some basic
 information encoded in the version number from which a user can judge how easy
@@ -123,7 +123,7 @@ stable.
 > {: .solution }
 {: .discussion }
 
-### Citable Releases (doi)
+## Citable Releases (doi)
 
 [Zenodo][zenodo] is a service that allows uploading different kinds of research
 output like publications, posters, presentations, data-sets, images, video/audio
@@ -143,7 +143,7 @@ and issued a DIO there.
 If you are using a different service like GitLab or Bitbucket, you can still
 upload releases manually.
 
-> ## Be Aware:
+> ## Be Aware
 > **Once something has been published on Zenodo, this cannot be undone!**
 {: .callout}
 

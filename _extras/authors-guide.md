@@ -7,7 +7,7 @@ permalink: /author-guide/
 ## Mermaid Examples
 
 [Mermaid](https://mermaid-js.github.io/mermaid/#/) is a JavaScript library that can be used
-to write various graphs and flow-charts within Markdown and render them on a website. 
+to write various graphs and flow-charts within Markdown and render them on a website.
 
 To enable Mermaid support add the following line to any page:
 
@@ -38,7 +38,7 @@ branch newbranch
 checkout newbranch
 commit
 commit
-checkout master
+checkout main
 commit
 commit
 merge newbranch
@@ -59,7 +59,7 @@ branch newbranch
 checkout newbranch
 commit
 commit
-checkout master
+checkout main
 commit
 commit
 merge newbranch

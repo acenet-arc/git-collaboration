@@ -28,12 +28,13 @@ Once the issue is resolved (bug has been fixed or ruled out, new feature has
 been implemented or rejected), the issue is closed and becomes inactive.
 
 If code is changed in response to an issue, one can (and should) cross-
-reference the commit and the issue.  This can be done in two ways:
+reference the commit and the issue. This can be done in two ways:
+
 1. Add the issue ID to the commit message, e.g. `fixes: #1`, `resolves: #2`
-or `implements #3`. Some platforms can automatically close the referenced
+or `implements #3`. Some platforms will automatically close the referenced
 issue.
 2. Mention one or more commit IDs (either short or long form)
-in articles of the issue. `fixed by: a1b2c3d`
+in articles of the issue, e.g.: `fixed by: a1b2c3d`.
 
 Most platforms support tagging issues with custom labels. This helps
 classifying them (bug, enhancement, cleanup, priority, etc.). Many allow also
@@ -53,7 +54,7 @@ similar happen 2 years ago? How exactly did we solve it?"*)
 > 3. Click  on _[New Issue]_
 > 4. Enter a _title_ and _comment_.
 > 5. Use various formatting options in the toolbar.
-> 6. Use the _Preview_ tab.   
+> 6. Use the _Preview_ tab.  
 >    You can switch back and forth between the _Write_ and _Preview_ tabs
 >    to test out the formatting.
 > 7. Submit the issue.
@@ -61,18 +62,19 @@ similar happen 2 years ago? How exactly did we solve it?"*)
 {: .challenge}
 
 > ## Check the Project Settings
+>
 > Most sites allow to enable/disable the issue tracker for each repository
-> in the settings.  Whether it is enabled or disabled for a new repository
-> depends on the default settings of the site.  Maybe you need to change
+> in the settings. Whether it is enabled or disabled for a new repository
+> depends on the default settings of the site. Maybe you need to change
 > the state in the repository's settings.
 {: .callout}
 
 ## Milestones
 
 Milestones are a way to keep track on how far along you are on the way to
-the next release.  You can create *Milestones* for your next releases,
+the next release. You can create *Milestones* for your next releases,
 like for the next Major-release (e.g. `v1.0`) as well as the next Minor-release
-(e.g. `v0.5`), etc.  Then you can attach issues to these different milestones:
+(e.g. `v0.5`), etc. Then you can attach issues to these different milestones:
 
 * An important bug that should be fixed for the next patch release.
 * A not so important bug that needs to go into the next minor release.
