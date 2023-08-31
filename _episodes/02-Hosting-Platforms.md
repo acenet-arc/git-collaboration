@@ -45,7 +45,7 @@ to be complete in any way but should just serve as a limited overview.
 
 * Biggest site
 * Unlimited public/private repositories
-* Hosting of static websites using ([GitHub pages](https://docs.github.com/en/pages))
+* Hosting of static websites using [GitHub pages](https://docs.github.com/en/pages)
 * Continuous Integration ([GitHub Actions](https://docs.github.com/en/actions)):
   * free CI-minutes for public repositories and self-hosted runners
   * limited free monthly CI-minutes for private repositories
@@ -60,7 +60,7 @@ to be complete in any way but should just serve as a limited overview.
 ### [GitLab.com][gitlab]
 
 * Unlimited public/private repositories
-* Hosting of static websites using ([GitLab pages](https://docs.gitlab.com/ee/user/project/pages/))
+* Hosting of static websites using [GitLab pages](https://docs.gitlab.com/ee/user/project/pages/)
 * Continuous Integration ([CI/CD pipeline](https://docs.gitlab.com/ee/ci/)) 
   with limited free monthly CI-minutes
 * [Package registry](https://docs.gitlab.com/ee/user/packages)
