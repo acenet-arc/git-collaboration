@@ -6,8 +6,8 @@ questions:
 - "How can I run tests automatically?"
 objectives:
 - "Short introduction to Continuous Integration."
-- "Setting up Continuous Integration for a Python project with GitHub and Travis"
-- "Additional examples for GitLab-CI and Bitbucket pipelines"
+- "Setting up Continuous Integration for a Python project with GitHub Actions."
+- "Additional examples for GitLab-CI and Bitbucket pipelines."
 keypoints:
 - "Running automated tests often helps tracking down bugs early."
 - "With CI, tests are being executed anytime changes are pushed to the repository."
@@ -21,13 +21,13 @@ a good practice in software development.
 But having a large set-suite is only helpful when you run it in it's entirety 
 on a regular basis. Otherwise you risk to miss side-effects of your changes
 for too long and it becomes more difficult to track down which change caused
-the test(s) to brake when there have been too many changes since the test 
+the test(s) to break when there have been too many changes since the test 
 was last used.
 
-The practice that is designed of helping with that is called **Continuous Integration**
+The practice that is designed to help with that is called **Continuous Integration**
 and is abbreviated as **CI**. CI automates building and/or running a test-suite 
 whenever changes are pushed to the repository on the server or whenever a 
-Pull-Request is opened.
+pull request is opened.
 
 Continuous Integration is often combined with **Continuous Delivery (CD)**, 
 where changes to a software are put into production either fully automatically,
@@ -38,10 +38,9 @@ changed or packaging and uploading uploading release-bundles anytime a new versi
 however always under the condition that all tests are passing.  
 Together they are commonly referred to as a **CI/CD Pipeline**.
 
-The three major Git-Hosting websites have CI/CD-pipelines directly build-in:
-[GitHub Actions][gh-actions], [GitLab-CI][gl-ce-ci] and 
-[Bitbucket Pipelines][bb-piplelines] and besides that there are also external
-services like [Travis-CI][travis] and [Circle-CI][circle-ci].
+The three major Git-Hosting websites have CI/CD-pipelines directly built-in:
+[GitHub Actions][gh-actions], [GitLab-CI][gl-ce-ci] and [Bitbucket Pipelines][bb-piplelines]. 
+There are also external services like [Travis-CI][travis] and [Circle-CI][circle-ci].
 
 All of those services count the number of minutes these pipelines run on their 
 servers and have different restrictions on how long the service can be used
@@ -61,13 +60,13 @@ minutes that these runners are working are not billed.
 
 These three CI-pipeline services have in common that they are configured
 with a single text file in the [YAML][yaml] format, which for GitHub Actions
-is placed in a directory called `.github/workflows` and for other services into
-root directory of a project the a specific name: 
+is placed in a directory called `.github/workflows` and for other services into the
+root directory of a project with a specific name: 
 `.gitlab-ci.yml` for GitLab, `bitbucket-pipelines.yml` for Bitbucket and 
-`.travis.yml` for Travis-CI,.
+`.travis.yml` for Travis-CI.
 
 These files need to contain information about all steps that are needed to 
-test and optionally deploy the software.  Typical steps include:
+test and optionally deploy the software. Typical steps include:
 
 - create a test environment
 - clear or pre-populate caches
@@ -79,23 +78,22 @@ test and optionally deploy the software.  Typical steps include:
 
 However not all of the steps are needed or desired in all cases.
 
-
-### Example files:
+## Example files
 
 Each of the CI services introduced here uses YAML as the file format 
 -- a way of encoding nested lists and dictionaries --
 in which the pipelines are described, however everyone uses a different set
 of rules about how certain elements should be named and how they should be 
-nested.  All services provide a good number of example files for several
+nested. All services provide a good number of example files for several
 supported languages which can be used as a starting point.
 
 The examples below all do basically the same thing: running the unit-tests
 of a Python project after installing all dependencies.
-The Travis and GitLab examples run the tests with two versions of Python
+The GitHub and GitLab examples run the tests with two versions of Python
 (2.7 and 3.8) the Bitbucket example only tests with Python 3.8.
 
+### GitHub Actions
 
-#### GitHub Actions:
 [GitHub Actions Quickstart][gh-actions-quickstart]
 {% raw %}
 ~~~
@@ -132,8 +130,8 @@ jobs:
 {: .language-yaml }
 {% endraw %}
 
+### GitLab-CI
 
-#### GitLab-CI:
 [GitLab-CI Quickstart][gitlab-ce-ci-quickstart]
 ~~~
 # ./.gitlab-ci.yml
@@ -159,7 +157,8 @@ test:3.8:
 ~~~
 {: .language-yaml }
 
-#### Bitbucket-Pipeline:
+### Bitbucket-Pipeline
+
 [Getting Started with Bitbucket Pipelines][bitbucket-pipleline-getting-started]
 ~~~
 # ./bitbucket-pipelines.yml
@@ -182,11 +181,12 @@ pipelines:
 ~~~
 {: .language-yaml }
 
-### Getting Started with GitHub Actions
+## Getting Started with GitHub Actions
 
 Let's get our feet wet with GitHub Actions.
 
 > ## Getting Started with GitHub Actions
+>
 > 1. Go to the cloned `testing_demo` repository on your computer.
 > 2. Create the `.github` and `.github/workflows` directories:
 >    ~~~
@@ -194,7 +194,7 @@ Let's get our feet wet with GitHub Actions.
 >    mkdir .github/workflows
 >    ~~~
 >    {: .language-bash}
-> 5. Copy the prepared `more_files/github-actions.yml` file to the 
+> 3. Copy the prepared `more_files/github-actions.yml` file to the 
 >    `.github/workflows` directory, as well as the `requirements.txt` to the root,
 >    then commit the change and push to GitHub:
 >    ~~~
@@ -206,24 +206,23 @@ Let's get our feet wet with GitHub Actions.
 >    testing_demo $  git push origin main
 >    ~~~
 >    {: .language-bash}
-> 6. Go to the "Commits tab" of your repository on GitHub.  
+> 4. Go to the "Commits" page of your repository on GitHub.  
 >    * a yellow <span style="color:orange">&#x25CF;</span> indicates testing is in progress,
 >    * a green  <span style="color:green">&#x2714;</span>  indicates all tests passed.
 >    * a red    <span style="color:red">&#x2716;</span>    indicates that there are failed tests,
-> 7. Refresh the browser every 10 seconds until a <span style="color:red">&#x2716;</span> appears.
-> 8. Click on the red <span style="color:red">&#x2716;</span> next to the latest commit,
->    and then on "Details" next to Travis-CI.
-> 9. Try to fix the error in the Python code, commit and push the change 
+> 5. Refresh the browser every 10 seconds until a <span style="color:red">&#x2716;</span> appears.
+> 6. Click on the red <span style="color:red">&#x2716;</span> next to the latest commit,
+>    and then on "Details".
+> 7. Try to fix the error in the Python code, commit and push the change 
 >    and then see if the tests pass.
-> 
+>
 {: .challenge}
 
-
-### A Second Look at the Pipeline definitions
+## A Second Look at the Pipeline definitions
 
 Let's have another look at the pipeline definitions to see what they are actually doing.
 
-#### GitHub Actions revisited:
+### GitHub Actions revisited
 
 Let's go over this workflow line by line:
 {% raw %}
@@ -253,7 +252,6 @@ jobs:
 {: .language-yaml }
 {% endraw %}
 
-
 *  This line defines the name of the workflow and will appear in the 'Actions' tab of the GitHub 
    repository.
   ~~~yaml
@@ -261,7 +259,7 @@ jobs:
   ~~~
 
 * This line specifies that this workflow should be executed whenever commits are pushed to the 
-  repository (a "push-event"). It is possible to set the pipeline to only run for pull-requests or 
+  repository (a "push-event"). It is possible to set the pipeline to only run for pull requests or 
   to only run the workflow only on certain branches or paths or tags. 
   See: [Workflow syntax for GitHub Actions][gh-actions-onpush] for more information.
   ~~~yaml
@@ -292,7 +290,7 @@ jobs:
   ~~~
 
 * This configures the job to run on an Ubuntu Linux runner. Other operating systems and versions 
-  are available as well.  Each job will run on a fresh virtual machine (or container). 
+  are available as well. Each job will run on a fresh virtual machine (or container). 
   See [Workflow syntax for GitHub Actions][gh-actions-runson] for more information.
   ~~~yaml
   runs-on: ubuntu-latest
@@ -300,8 +298,8 @@ jobs:
 
 * These lines define that this job should be executed multiple times with two different Python 
   versions, 2.7 and 3.8. 
-  The test matrix could also involve  multiple operating systems (e.g. Linux, Windows, macOS), 
-  however keep in mind that testing with  e.g. three  python-versions on three different operating 
+  The test matrix could also involve multiple operating systems (e.g. Linux, Windows, macOS), 
+  however keep in mind that testing with e.g. three python-versions on three different operating 
   systems already generates 9 jobs. 
   Running all of these on every commit can quickly deplete the available pipeline-minutes.
   ~~~yaml
@@ -322,7 +320,7 @@ jobs:
   ~~~
   {% endraw %}
   
-  * This step just runs the command `pytest`.  That wasn't too hard, was it?
+  * This step just runs the command `pytest`. That wasn't too hard, was it?
     {% raw %}
     ~~~yaml
       - run:  pytest -v
@@ -330,8 +328,8 @@ jobs:
     {% endraw %}
 
   * Next we have a step consisting of two lines. The second line runs a `pip install` commands to
-    install the required Python packages defined in the `requirements.txt` file.  The first line
-    defines a name for this step that will show up in the pipeline logs.  If we would not define
+    install the required Python packages defined in the `requirements.txt` file. The first line
+    defines a name for this step that will show up in the pipeline logs. If we would not define
     the name, this step would show up as "Run pip install -r requirements.txt".
     {% raw %}
     ~~~yaml
@@ -343,7 +341,7 @@ jobs:
   * This step doesn't execute a simple shell command, but rather calls an external "action" 
     with the name "action/checkout" in its version "v2" (this is the version of the action, not
     of our code!). 
-    This action will checkout the current git repository so that the tests can be executed.  
+    This action will checkout the current git repository so that the tests can be executed. 
     Details for this action can be found at: [github.com/actions/checkout][gh-actions-checkout]
     {% raw %}
     ~~~yaml
@@ -353,10 +351,10 @@ jobs:
 
 
   * The following lines will also use an "action", this time [actions/setup-python@v2][gh-actions-setuppython],
-    which creates a Python environment for a particular Python version.  The lines `with:` > 
+    which creates a Python environment for a particular Python version. The lines `with:` > 
     `python-version: ${{ matrix.python-version }}`
     will set the variable `python-version` that is used by the `setup-python` action to the current 
-    value of `matrix.python-version` from  our test-matrix.  
+    value of `matrix.python-version` from our test-matrix.  
     Finally this step also defines a name that includes the Python version from the variable.
     {% raw %}
     ~~~yaml
@@ -368,13 +366,13 @@ jobs:
     {: .language-yaml }
     {% endraw %}
 
-#### GitLab-CI revisited
+<!-- #### GitLab-CI revisited
 FIXME: GitLab-CI revisited
 
 #### Bitbucket-Pipeline revisited
-FIXME: Bitbucket-Pipeline revisited
+FIXME: Bitbucket-Pipeline revisited -->
 
-### Other CI solutions
+## Other CI solutions
 
 There are also other Build/CI/CD services and tools that can be use as an 
 alternative to those provided by the Git-Hosting services.
@@ -387,7 +385,7 @@ repository in the project's settings menu under "Integrations".
 
 [Jenkins][jenkins] and other similar tools, been around much longer than the services described 
 above, and it requires that you can install on your own machine and can be used with any version 
-control solution.  Running the pipelines can then either be triggered by web-hooks (the Source code
+control solution. Running the pipelines can then either be triggered by web-hooks (the Source code
 repository calls a certain URL when a new commit has been pushed) or on a defined schedule (cron-job).
 Jenkins also doesn't use [YAML][yaml] to describe the pipelines, but has its own "Domain Specific 
 Language" for it's `Jenkinsfile`s.

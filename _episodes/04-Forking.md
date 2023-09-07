@@ -15,7 +15,7 @@ keypoints:
 {% include mermaid.html %}
 
 Forking a repository on a Git hosting site creates a copy of the repository
-under your own user-account, thereby keeping a link to the original repository.
+under your own user account, thereby keeping a link to the original repository.
 This only works within the same platform, i.e. you need to have an account
 on the same platform as the original repository.
 
@@ -72,7 +72,7 @@ that copy and can work on implementing an enhancement or fixing a bug.
 > </div>
 >
 > The original repository will remain in its initial state and issues and
-> pull-requests will only be created towards the *instructor's fork* of the repository.
+> pull requests will only be created towards the *instructor's fork* of the repository.
 {: .callout}
 
 {% include links.md %}

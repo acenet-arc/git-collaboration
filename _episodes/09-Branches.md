@@ -150,7 +150,7 @@ $ git commit
        c3((c3)) ==> c1
        c4((c4)) ==> c3
        c5((c5)) ==> c4
- 
+
        l1([main]) --> c2
        l2([feature1]) --> c5
        HEAD([HEAD]) --> l2
@@ -160,15 +160,15 @@ $ git commit
        class l1,l2 label
        class HEAD head
    </div>
-   
+
    Even though the new feature is now complete, it needs code review and some thorough testing.
    We have pushed the feature1 branch to the remote repository with `git push origin feature1`. 
 
    While a colleague reviews the code, they check out this branch and start running some extensive
    tests systems.  Until that is done, we can start working on something else.
 
-We can fake this in the git sandbox by running the below.
 ~~~
+We can fake this in the git sandbox by running:
 $ git clone
 ~~~
 {: .language-bash}
@@ -241,7 +241,7 @@ $ git commit
        c4((c4)) ==> c3
        c5((c5)) ==> c4
        c6((c6)) ==> c2
- 
+
        l1([main]) --> c2
        l2([feature1]) --> c5
        l3([feature2]) --> c6
@@ -293,10 +293,10 @@ others can use it.
 ## Merging branches
 
 The `bugfix3` has quickly been tested and reviewed (it was a quite simple fix), so we now want to 
-merge it into the `main` branch. 
+merge it into the `main` branch.
 <ol markdown="1">
 <li markdown="1">
-First we need to change to the `main` branch 
+First we need to change to the `main` branch:
 ~~~
 $ git checkout main
 ~~~
@@ -398,7 +398,6 @@ $ git merge bugfix3
 Our colleague reports back to us on `feature1` and made a small change (*c9*), which we now want
    to pull into our local `feature1` branch.
 
-We can fake the work of our colleague in the git sandbox with
 ~~~
 $ git fakeTeamwork feature1 1
 ~~~
@@ -443,18 +442,13 @@ $ git checkout main
 $ git merge feature1
 ~~~
 {: .language-bash}
-This is not a fast-forward merge as 
-   branches `main` and `feature1` have diverged.  This merge will cause a merge commit *c10* to be
-   created that combines the content of *c8* and *c9*.
-   
-   Git will do a fantastic job combining the content from both commits, however if the same line
-   has been changed (or lines in close proximity) on both branches since their last common ancestor,
-   git won't be able to resolve this on its own and will alert us of a conflict (which was covered 
-   in Episode [Conflicts](https://swcarpentry.github.io/git-novice/09-conflict/index.html) of the
-   lesson "Version Control with Git").  
-   
-   We are lucky and don't run into a conflict with this merge.
-   
+
+This is not a fast-forward merge as branches `main` and `feature1` have diverged.  This merge will cause a merge commit *c10* to be created that combines the content of *c8* and *c9*.
+
+Git will do a fantastic job combining the content from both commits, however if the same line has been changed (or lines in close proximity) on both branches since their last common ancestor, git won't be able to resolve this on its own and will alert us of a conflict (which was covered in Episode [Conflicts](https://swcarpentry.github.io/git-novice/09-conflict/index.html) of the lesson "Version Control with Git").  
+
+We are lucky and don't run into a conflict with this merge.
+
    <div class="mermaid">
    flowchart RL
        c0((c0))
@@ -469,7 +463,7 @@ This is not a fast-forward merge as
        c9((c9)) ==> c5
        c10((c10)) ==> c8
        c10((c10)) ==> c9
-   
+
        l1([main]) --> c10
        l2([feature1]) --> c9
        l3([feature2]) --> c6
@@ -485,7 +479,9 @@ This is not a fast-forward merge as
    </div>
 </li>
 </ol>
-## Cleaning up
+
+## Cleaning Up
+
 <ol>
 <li markdown="1">We can now delete the branch `bugfix3`, because we no longer need it. We do this with the command:
 ~~~
@@ -507,7 +503,7 @@ $ git branch -d bugfix3
        c9((c9)) ==> c5
        c10((c10)) ==> c8
        c10((c10)) ==> c9
-   
+
        l1([main]) --> c10
        l2([feature1]) --> c9
        l3([feature2]) --> c6
@@ -541,7 +537,8 @@ If you are sure you want to delete it, run 'git branch -D feature2'.
 However, in *Git Sandbox* it will happily do this.
 </li>
 </ol>
-   > ## Be Careful When Deleting Un-merged Branches.
+
+   > ## Be Careful When Deleting Un-merged Branches
    >
    > Here Git warns us that we are about to delete a branch that has not been merged.
    > Without the "label" that is the branch name, we are about to loose access to those commits that

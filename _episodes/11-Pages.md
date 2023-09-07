@@ -28,15 +28,14 @@ The same methodology applies to GitLab and Bitbucket with the `<username>.gitlab
 and `<username>.bitbucket.io` domains respectively.  GitHub and GitLab also 
 allow configuring a custom domain, e.g. `www.example.com`.
 
-
-### Deploying a page with GitHub pages
+## Deploying a page with GitHub pages
 
 Let's try out serving a small page on GitHub from within your `testing_demo`
 repository.
 
 First we need to activate the "Pages" functionality for this repo:
 
-1. go to the repository's settings, 
+1. go to the repository's settings,
 2. scroll down to "GitHub Pages"
 3. in the dropdown select **main branch / docs folder**
 4. click **Save**
@@ -94,7 +93,6 @@ From the data inside the [Jekyll][jekyll] configuration file `_config.yml`
 and landing page `index.md` in Markdown format, a website was build on
 the GitHub servers and is now available to be viewed by anyone.
 
-
 > ## Change the Jekyll theme
 > 
 > Go back to the repository's settings and use the *Theme Chooser* to select
@@ -103,8 +101,6 @@ the GitHub servers and is now available to be viewed by anyone.
 > this change into your local repository.
 >
 {: .challenge }
-
-
 
 > ## Some notes on GitHub pages
 >
@@ -120,8 +116,7 @@ the GitHub servers and is now available to be viewed by anyone.
 > 
 {: .callout }
 
-
-### GitLab pages
+## GitLab pages
 
 [GitLab Pages][gl-pages] makes use of the [GitLab CI][gitlab].  This makes
 the GitLab pages a bit more flexible but in turn you must maintain your
@@ -129,8 +124,7 @@ the GitLab pages a bit more flexible but in turn you must maintain your
 However there are a number of examples for different use-cases that can 
 be easily adapted.
 
-
-### Bitbucket pages
+## Bitbucket pages
 
 At the time this material is being created (October 2018), Bitbucket
 only serves HTML-pages as they are directly from the repository.
@@ -138,13 +132,11 @@ only serves HTML-pages as they are directly from the repository.
 Please consult their [documentation][bb-pages] for more information
 and features that have been introduced since then.
 
+## Documentation
 
-Documentation:
 * [GitHub Pages][gh-pages]
 * [GitLab Pages][gl-pages]
 * [Bitbucket Pages][bb-pages]
-
-
 
 
 {% include links.md %}
