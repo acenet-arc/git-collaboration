@@ -37,7 +37,7 @@ into the original repository from the website and thereby close the pull request
 > 1. Go to your forked repository on the website.
 > 2. Clone it to your Desktop using `git clone ...` in the Unix Shell:
 >    ~~~
->    $ git clone https://github.com/<Your_GitHub_Username>/testing_demo.git
+>    $ git clone git@github.com:<Your_GitHub_Username>/testing_demo.git
 >    $ cd testing_demo
 >    $ ls
 >    ~~~
